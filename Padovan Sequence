@@ -1,0 +1,8 @@
+def pad(n):
+    _curr,_next,_next2,_next3=1,1,1,2
+    for _ in range(n-1):
+        _curr,_next,_next2,_next3=_next,_next2,_curr+_next,_next+_next2
+    return _curr
+n=int(input("몇 번째 파도반 수열을 구할까요?(1<=n<=100) : "))
+
+print(pad(n))
